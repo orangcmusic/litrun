@@ -1,0 +1,20 @@
+name: macOS CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test-and-build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test and package universal app
+        run: ./scripts/package_release.sh
+      - name: Upload local-test package
+        uses: actions/upload-artifact@v4
+        with:
+          name: LitRun-macOS13-universal
+          path: |
+            dist/LitRun-*.zip
+            dist/LitRun-*.zip.sha256

@@ -1,0 +1,1 @@
+testuser ALL=(root) NOPASSWD: /Library/PrivilegedHelperTools/io.github.achengbatian.lidrunswitch-helper
