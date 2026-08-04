@@ -77,7 +77,15 @@ enum MainControlViewSmoke {
         precondition(abs(manualSwitchFrame.midY - fanSliderFrame.midY) < 16)
         let alignmentFrames = view.fanControlAlignmentFramesForTesting
         precondition(abs(alignmentFrames.fanSwitch.maxX - alignmentFrames.lowPowerSwitch.maxX) < 0.1)
-        precondition(abs(alignmentFrames.fanSlider.minX - alignmentFrames.lidSwitch.minX) < 0.1)
+        // Native controls may have platform-specific frame insets; compare the
+        // alignment rectangles used by Auto Layout for cross-macOS stability.
+        let sliderAlignmentFrame = view.fanSpeedSlider.alignmentRect(
+            forFrame: alignmentFrames.fanSlider
+        )
+        let lidSwitchAlignmentFrame = view.lidModeSwitch.alignmentRect(
+            forFrame: alignmentFrames.lidSwitch
+        )
+        precondition(abs(sliderAlignmentFrame.minX - lidSwitchAlignmentFrame.minX) < 0.1)
         precondition(view.fanElementsWithinBoundsForTesting)
         precondition(containsText("风扇控制", in: view))
         precondition(containsText("手动", in: view))

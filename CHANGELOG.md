@@ -4,6 +4,8 @@
 
 - Fix a Swift type-inference failure in the menu-bar renderer on GitHub's
   macOS CI runner.
+- Make the native-control layout smoke test compare Auto Layout alignment
+  rectangles across macOS versions instead of platform-specific frame insets.
 - Remove internal upload and friend-testing instructions from the public
   repository and release archive.
 - Keep the release archive focused on the signed `LitRun!.app` bundle.
