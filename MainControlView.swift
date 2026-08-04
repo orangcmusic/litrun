@@ -1253,7 +1253,8 @@ private final class ModeRowView: NSView {
 
     var switchTrailingClearanceForTesting: CGFloat {
         layoutSubtreeIfNeeded()
-        return bounds.maxX - switchControl.frame.maxX
+        let switchAlignmentFrame = switchControl.alignmentRect(forFrame: switchControl.frame)
+        return bounds.maxX - switchAlignmentFrame.maxX
     }
 
     func setHoveredForTesting(_ hovered: Bool) {
