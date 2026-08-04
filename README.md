@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/orangcmusic/litrun/releases/tag/v3.0.0"><img src="https://img.shields.io/github/v/release/orangcmusic/litrun?include_prereleases&label=release" alt="Latest release"></a>
+  <a href="https://github.com/orangcmusic/litrun/releases/tag/v3.0.1"><img src="https://img.shields.io/github/v/release/orangcmusic/litrun?include_prereleases&label=release" alt="Latest release"></a>
   <a href="https://github.com/orangcmusic/litrun/actions/workflows/ci.yml"><img src="https://github.com/orangcmusic/litrun/actions/workflows/ci.yml/badge.svg" alt="CI status"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-111111.svg" alt="MIT license"></a>
 </p>
@@ -40,9 +40,9 @@ LitRun! 是一个原生 AppKit 菜单栏工具，面向需要让代码、自动�
 
 ## 下载和安装
 
-前往 [v3.0.0 Release](https://github.com/orangcmusic/litrun/releases/tag/v3.0.0)，推荐下载拖拽式 DMG：
+前往 [v3.0.1 Release](https://github.com/orangcmusic/litrun/releases/tag/v3.0.1)，推荐下载拖拽式 DMG：
 
-1. 打开 `LitRun-v3.0.0-macOS13-universal.dmg`。
+1. 打开 `LitRun-v3.0.1-macOS13-universal.dmg`。
 2. 将 `LitRun!.app` 拖到旁边的 `Applications` 图标。
 3. 从“应用程序”或菜单栏启动 LitRun!。
 
@@ -110,7 +110,7 @@ ZIP 适合需要手动解压或自动化部署的测试者。两种包都包含�
 
 ## 项目文档
 
-[架构](docs/ARCHITECTURE.md) · [兼容性](docs/COMPATIBILITY.md) · [隐私](PRIVACY.md) · [安全](SECURITY.md) · [第三方声明](THIRD_PARTY_NOTICES.md) · [发布检查](docs/RELEASE_CHECKLIST.md) · [朋友测试指南](docs/FRIEND_TEST_GUIDE.zh-CN.txt)
+[架构](docs/ARCHITECTURE.md) · [兼容性](docs/COMPATIBILITY.md) · [隐私](PRIVACY.md) · [安全](SECURITY.md) · [第三方声明](THIRD_PARTY_NOTICES.md) · [发布检查](docs/RELEASE_CHECKLIST.md)
 
 LitRun! 不联网、不上传遥测、不保存任务内容。
 

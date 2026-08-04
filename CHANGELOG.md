@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.0.1 build 76 - 2026-08-04
+
+- Fix a Swift type-inference failure in the menu-bar renderer on GitHub's
+  macOS CI runner.
+- Remove internal upload and friend-testing instructions from the public
+  repository and release archive.
+- Keep the release archive focused on the signed `LitRun!.app` bundle.
+
 ## 3.0.0 build 75 - 2026-08-03
 
 - Allow the final selected menu-bar metric to be unchecked and persist an empty

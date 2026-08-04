@@ -594,7 +594,7 @@ final class StatusBarController: NSObject {
                     let textWidth = CGFloat(CTLineGetTypographicBounds(line, nil, nil, nil))
                     let textOrigin = usesCompactFiveMetricLayout
                         ? cellOrigin
-                        : cellOrigin + (columnWidths[columnIndex] - textWidth) / 2
+                        : cellOrigin + (columnWidths[columnIndex] - textWidth) / CGFloat(2)
                     context.textPosition = CGPoint(
                         x: textOrigin,
                         y: baselines[rowIndex]

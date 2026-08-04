@@ -18,7 +18,6 @@ DMG_CHECKSUM_TMP="$VERIFY_ROOT/$DMG_NAME.sha256"
 PACKAGE_ROOT="$VERIFY_ROOT/package"
 DMG_ROOT="$VERIFY_ROOT/dmg-root"
 DMG_MOUNT_POINT=""
-FRIEND_GUIDE="$ROOT/docs/FRIEND_TEST_GUIDE.zh-CN.txt"
 
 cleanup() {
   if [ -n "$DMG_MOUNT_POINT" ]; then
@@ -51,12 +50,10 @@ fi
 mkdir -p "$DIST"
 /bin/mkdir -p "$PACKAGE_ROOT"
 /usr/bin/ditto "$APP" "$PACKAGE_ROOT/LitRun!.app"
-/usr/bin/ditto "$FRIEND_GUIDE" "$PACKAGE_ROOT/READ_ME_FIRST.txt"
 /usr/bin/find "$PACKAGE_ROOT" -exec /usr/bin/touch -t 200001010000 {} +
 (
   cd "$PACKAGE_ROOT"
   TZ=UTC /usr/bin/zip -qry -X "$ZIP_TMP_PATH" "LitRun!.app"
-  TZ=UTC /usr/bin/zip -q -X "$ZIP_TMP_PATH" "READ_ME_FIRST.txt"
 )
 
 if /usr/bin/unzip -l "$ZIP_TMP_PATH" | /usr/bin/grep -E '__MACOSX|/\._' >/dev/null; then
@@ -74,7 +71,6 @@ fi
 /usr/bin/unzip -q "$ZIP_TMP_PATH" -d "$VERIFY_ROOT"
 ARCHIVE_APP="$VERIFY_ROOT/LitRun!.app"
 ARCHIVE_FAN_TOOL="$ARCHIVE_APP/Contents/Resources/lid-run-switch-fanctl"
-[ -f "$VERIFY_ROOT/READ_ME_FIRST.txt" ]
 
 for candidate in "$APP" "$ARCHIVE_APP"; do
   candidate_fan="$candidate/Contents/Resources/lid-run-switch-fanctl"
